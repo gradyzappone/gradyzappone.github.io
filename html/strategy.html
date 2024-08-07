@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blue Integrity Network</title>
+	<link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+
+	<div class="white-ribbon">
+        	<img src="../images/logo.jpg" alt="Logo" class="logo">
+        	<div class="nav-links">
+            		<a href="../index.html"class="nav-link">Home</a>
+            		<a href="about.html" class="nav-link">About</a>
+            		<a href="strategy.html" class="nav-link">Strategy</a>
+            		<a href="outcomes.html" class="nav-link">Outcomes</a>
+            		<a href="sources.html" class="nav-link">Sources</a>
+        </div>
+
+        <div class="contact-login">
+            <button id="color-button" onclick="toggleColor()"><b>Contact Us</b></button>
+    </div>
+    <div id="contact-popup" class="contact-popup" style="display:none;">
+        <div class="popup-content">
+            <span class="close-popup" onclick="closePopup()">&times;</span>
+            <p>Email: grady.zappone@mail.mcgill.ca</p>
+        </div>
+    </div>
+
+	</div>
+
+    <div class="title-thing">
+        <h1>The Network's Strategy</h1>
+    </div>
+
+    <div class="page-blurb-container">
+        <img class="page-blurb" src="../images/definition.png" alt="MPA Definition">
+    </div>
+    <div class="moving-arrow-container">
+        <img class="moving-arrow" src="../images/cArrow.png" alt="Arrow">
+    </div>
+    <div>
+        <img class="screen-image" src="../images/issues.png" alt="MPA Issues">
+        <img class="screen-image" src="../images/examples.png" alt="Corruption Examples">
+        <div class="centered-container">
+            <img class="auto-image" src="../images/addressingTitle.png" alt="Addressing the Problem">
+        </div>
+        <img class="screen-image-no-space" src="../images/econ.png" alt="Economic Approaches">
+        <img class="screen-image-no-space" src="../images/inst.png" alt="Institutional Approaches">
+        <img class="screen-image-no-space" src="../images/culture.png" alt="Cultural Approaches">
+    </div>
+
+    	
+        
+        <div class="gradient-button-container">
+            <a href="outcomes.html" class="demo-button">Learn More About Anticipated Outcomes</a>
+        </div>
+
+		<footer class="footer">
+			<img src="../images/footer.png" alt="Footer" class="footer-image">
+		</footer>
+
+
+
+        <script>
+            document.addEventListener('scroll', function() {
+            const arrow = document.querySelector('.moving-arrow');
+            const windowHeight = window.innerHeight;
+            const arrowPosition = arrow.getBoundingClientRect().top;
+        
+            const distanceFromCenter = Math.abs(windowHeight / 2 - arrowPosition);
+            const scale = Math.max(1 - distanceFromCenter / windowHeight, 0.5); // Scale between 0.5 and 1
+        
+            arrow.style.transform = `scale(${scale})`;
+            });
+
+        function showPopup() {
+            document.getElementById('contact-popup').style.display = 'flex';
+        }
+    
+        function closePopup() {
+            document.getElementById('contact-popup').style.display = 'none';
+        }
+    
+        document.getElementById('color-button').addEventListener('click', showPopup);
+
+            </script>
+</body>
+</html>

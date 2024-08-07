@@ -1,0 +1,52 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.background-image {
+    background-image: url('../images/index/indexbkground.png'); 
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-title {
+    font-family: 'Varela Round', sans-serif; 
+    font-size: 7em; /* Large size for large screens */
+    color: white; 
+    text-align: center;
+    margin-top: -.5em;
+}
+
+.subtitle {
+    font-family: 'Varela Round', sans-serif; 
+    font-size: 1.5em; /* Suitable for large screens */
+    color: white; 
+    text-align: center; 
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .centered-title {
+        font-size: 4em; /* Smaller size for tablets */
+    }
+    .subtitle {
+        font-size: 1em; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .centered-title {
+        font-size: 2em; /* Even smaller for mobiles */
+    }
+    .subtitle {
+        font-size: 0.8em; /* Adjust for mobile screens */
+    }
+}
+

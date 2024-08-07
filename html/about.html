@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Blue Integrity Network</title>
+	<link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+
+	<div class="white-ribbon">
+        	<img src="../images/logo.jpg" alt="Logo" class="logo">
+        	<div class="nav-links">
+            		<a href="../index.html"class="nav-link">Home</a>
+            		<a href="about.html" class="nav-link">About</a>
+            		<a href="strategy.html" class="nav-link">Strategy</a>
+            		<a href="outcomes.html" class="nav-link">Outcomes</a>
+            		<a href="sources.html" class="nav-link">Sources</a>
+            </div>
+            
+            <div class="contact-login">
+                <button id="color-button" onclick="toggleColor()"><b>Contact Us</b></button>
+        </div>
+        <div id="contact-popup" class="contact-popup" style="display:none;">
+            <div class="popup-content">
+                <span class="close-popup" onclick="closePopup()">&times;</span>
+                <p>Email: grady.zappone@mail.mcgill.ca</p>
+            </div>
+        </div>
+	</div>
+    <div class="title-thing">
+    <h1>About Blue Integrity Network</h1>
+    </div>
+    <div >
+        <img class="screen-image" src="../images/about.png" alt="Mandate">
+        <img class="screen-image" src="../images/mandate.png" alt="Mandate">
+    </div>
+
+    <div class="gradient-button-container">
+        <a href="strategy.html" class="demo-button">Learn More About Our Strategy</a>
+    </div>
+
+    	
+		<footer class="footer">
+			<img src="../images/footer.png" alt="Footer" class="footer-image">
+		</footer>
+
+
+        <script>
+		
+			function showPopup() {
+				document.getElementById('contact-popup').style.display = 'flex';
+			}
+		
+			function closePopup() {
+				document.getElementById('contact-popup').style.display = 'none';
+			}
+		
+			document.getElementById('color-button').addEventListener('click', showPopup);
+		</script>
+
+
+</body>
+</html>
