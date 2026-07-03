@@ -3,84 +3,205 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Simple Webpage</title>
+  <title>The Boat Lab | GIS</title>
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      color: #222;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #f5f7fa;
+      color: #1a1a1a;
+      line-height: 1.6;
     }
 
-    header {
-      background: #1f4e79;
+    /* NAVBAR */
+    nav {
+      background: #12324a;
       color: white;
-      padding: 40px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      position: sticky;
+      top: 0;
+    }
+
+    nav h1 {
+      font-size: 18px;
+      margin: 0;
+      letter-spacing: 0.5px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    /* HERO */
+    header {
+      background: linear-gradient(135deg, #1f4e79, #2d7dbb);
+      color: white;
+      padding: 70px 20px;
       text-align: center;
     }
 
+    header h2 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      max-width: 700px;
+      margin: 0 auto;
+      opacity: 0.95;
+    }
+
+    /* CONTAINER */
     main {
-      max-width: 800px;
-      margin: 40px auto;
+      max-width: 1000px;
+      margin: 50px auto;
       padding: 0 20px;
     }
 
+    section {
+      margin-bottom: 50px;
+    }
+
+    h3 {
+      border-left: 4px solid #2d7dbb;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+
+    /* CARDS */
     .card {
       background: white;
+      border-radius: 12px;
       padding: 20px;
       margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    /* PDF GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+    }
+
+    .pdf-card {
+      background: white;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transition: transform 0.15s ease;
+    }
+
+    .pdf-card:hover {
+      transform: translateY(-3px);
+    }
+
+    .pdf-card a {
+      text-decoration: none;
+      color: #1f4e79;
+      font-weight: 600;
+    }
+
+    .tag {
+      font-size: 12px;
+      background: #e8f1f8;
+      padding: 3px 8px;
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 8px;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      font-size: 14px;
+      padding: 30px;
+      font-size: 13px;
       color: #666;
-    }
-
-    a {
-      color: #1f4e79;
     }
   </style>
 </head>
 
 <body>
 
+  <nav>
+    <h1>The Boat Lab</h1>
+    <div>
+      <a href="#projects">Projects</a>
+      <a href="https://github.com/">GitHub</a>
+    </div>
+  </nav>
+
   <header>
-    <h1>Welcome to My Website</h1>
-    <p>A simple webpage hosted on GitHub Pages</p>
+    <h2>Grady Zappone | GIS Portfolio</h2>
+    <p>
+      I work on landscape-scale restoration, hydrological systems, and spatial data tools
+      using GIS, remote sensing, and field-based ecological datasets.
+    </p>
   </header>
 
   <main>
-    <div class="card">
-      <h2>About Me</h2>
-      <p>
-        I build GIS projects, interactive maps, and environmental data tools.
-      </p>
-    </div>
 
-    <div class="card">
-      <h2>Projects</h2>
-      <ul>
-        <li>Leaflet interactive fish tracking map</li>
-        <li>ArcGIS slope/aspect analysis tool</li>
-        <li>Forest monitoring database system</li>
-      </ul>
-    </div>
+    <!-- MAPS -->
+    <section id="maps">
+      <h3>GIS Maps (PDF Portfolio)</h3>
 
-    <div class="card">
-      <h2>Contact</h2>
       <p>
-        Find me on <a href="https://github.com/">GitHub</a>
+        Click to open full-resolution PDF maps.
       </p>
-    </div>
+
+      <div class="grid">
+
+        <!-- EXAMPLE PDF ITEM -->
+        <div class="pdf-card">
+          <a href="maps/CLSC Facility Analysis in Downtown Montreal.pdf" target="_blank">
+            Public Clinics Location Analysis in Downtown Montreal
+          </a>
+        </div>
+
+        <div class="pdf-card">
+          <a href="maps/Vancouver Crime Dispersion Analysis.pdf" target="_blank">
+            Vancouver Crime Dispersion Analysis
+          </a>
+        </div>
+
+        <div class="pdf-card">
+          <a href="maps/McGill University Campus 3D Map.pdf" target="_blank">
+            McGill University Campus 3D Map
+          </a>
+        </div>
+
+        <div class="pdf-card">
+          <a href="maps/Vancouver Crime Hot Spot Analysis.pdf" target="_blank">
+            Vancouver Crime Hot Spot Analysis
+          </a>
+        </div>
+
+        <div class="pdf-card">
+          <a href="maps/Ammonia Leak Analysis.pdf" target="_blank">
+            Ammonia Leak Analysis
+          </a>
+        </div>
+
+        <div class="pdf-card">
+          <a href="maps/Agent-based Model of Whale Interations .pdf" target="_blank">
+            Agent-based Model of Whale Interations 
+          </a>
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
   <footer>
-    © 2026 My Website
+    © 2026 The Boat Lab — Built by Grady Zappone 
   </footer>
 
 </body>
